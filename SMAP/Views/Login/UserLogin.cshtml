@@ -1,0 +1,69 @@
+﻿@* @model SMAP.Models.UserView; *@
+@{
+	ViewData["Title"] = "Login";
+	ViewData["PageWithoutContainer"] = "true";
+	ViewData["PageWithoutHeader"] = "true";
+	ViewData["PageWithoutSidebar"] = "true";
+	ViewData["BodyClass"] = "pace-top";
+}
+
+<!-- begin login -->
+<div class="login login-with-news-feed">
+	<!-- begin news-feed -->
+	<div class="news-feed">
+		<div class="news-image" style="background-image: url(/img/fundo1.jpg)"></div>
+		<div class="news-caption">
+			<h2>Sistema de Mapeamento para Atendimento e Projeto</h2>
+			<p class="text-grey-darker mb-0">
+				&copy; Telecall 2024
+			</p>
+		</div>
+	</div>
+	<!-- end news-feed -->
+	<!-- begin right-content -->
+	<div class="right-content">
+		<!-- begin login-header -->
+		<div class="login-header">
+			<div class="brand">
+				<img src="~/img/Logo_Telecall.png" style="margin: 0px -25px;" />
+				@*  <small style="margin-top: 2px;">Conferência Telecall</small>  *@
+				
+			</div>		
+		</div>
+		<!-- end login-header -->
+
+
+		<!-- begin login-content -->
+		<div class="login-content">
+			<form method="" action="" class="margin-bottom-0" id="account">
+
+				@* @if (TempData.ContainsKey("ErrorMessage"))
+				{
+					<div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+				} *@
+				
+				<div class="form-group m-b-20">
+					<div class="input-group" id="show_hide_password">
+						<input class="form-control form-control-lg" placeholder="usuário" />
+						
+					</div>
+				</div>
+				<div class="form-group m-b-20">
+					<div class="input-group" id="show_hide_password">
+						<input class="form-control form-control-lg" placeholder="Digite sua senha" />
+						
+					</div>
+				</div>
+				<div class="login-buttons">
+					<button type="submit" class="btn btn-primary btn-block btn-lg">Entrar</button>
+				</div>
+			</form>
+
+			
+			
+		</div>
+		<!-- end login-content -->
+	</div>
+	<!-- end right-container -->
+</div>
+<!-- end login -->

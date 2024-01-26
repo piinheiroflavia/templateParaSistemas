@@ -1,0 +1,57 @@
+﻿<!-- begin #header -->
+<div id="header" class="header navbar-default d-">	
+	<!-- begin navbar-header -->
+    <div class="navbar-header">
+        @if (ViewData["PageWithTwoSidebar"] != null)
+        {
+            <button type="button" class="navbar-toggle pull-left" data-click="sidebar-toggled">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        }
+        <a href="/dashboard" onload="userFunction()" class="navbar-brand justify-content-center"><img src="~/img/Logo_Telecall.png" /></a>
+        <!--<a href="/dashboard" class="navbar-brand justify-content-center h-auto"><img src="~/img/rat-6117507.svg" /></a>-->
+
+        <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+    </div>
+	<!-- end navbar-header -->
+	@if (ViewData["PageWithMegaMenu"] != null) {
+	<!-- begin navbar-collapse -->
+	<div class="collapse navbar-collapse" id="top-navbar">
+		<ul class="nav navbar-nav">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-database fa-fw mr-1 mr-md-0"></i> New <b class="caret ml-1 ml-md-0"></b>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- end navbar-collapse -->
+	}
+	<!-- begin header-nav -->
+	
+
+	<ul class="navbar-nav navbar-right">
+		<li class="dropdown navbar-user">
+			
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<i class="fa fa-user-circle" style="font-size:2.2em; margin-right: 4px;"></i> 
+				<span class="d-none d-md-inline" id="nameUser" style='font-size: 16.5px; margin-bottom: 30px;'>@TempData["UserName"]</span> <b class="caret"></b>
+			</a>
+			<div class="dropdown-menu dropdown-menu-right">
+				<form class="d-flex" method="post" asp-controller="Login" asp-action="Logout">
+					<input class="btn btn-link" type="submit" value="Sair" />
+				</form>
+			</div>
+
+		</li>
+	</ul>
+	<!-- end header-nav -->
+</div>
+<!-- end #header -->
